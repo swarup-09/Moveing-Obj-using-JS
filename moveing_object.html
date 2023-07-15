@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity-Wheel</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #obj
+        {
+            margin-top: -20px;
+        }
+        p
+        {
+            text-align: center;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <p>Try to stop wheel</p>
+    <div id = "obj">
+        <img src="wheel-animation.gif" >
+    </div>
+
+    <script>
+        let i = 0
+        setInterval(() => {
+            i = i+10;
+            if(i == 1500)
+            {
+               i=-700; 
+            }
+            else
+            document.getElementById("obj").style.marginLeft= i+"px";
+        }, 100);
+    </script>
+</body>
+</html>
